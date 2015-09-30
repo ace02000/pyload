@@ -579,7 +579,7 @@ class Hoster(Plugin):
         if not self.account:
             return True
 
-        traffic = self.account.get_data(refresh=True)['trafficleft']
+        traffic = self.account.get_data()['trafficleft']
 
         if traffic is None:
             return False
